@@ -1,3 +1,16 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
 .nav-item::after {
     content: "";
     display: block;
@@ -12,5 +25,13 @@
 
 .nav-item {
     margin: 15.5px;
+}
+
+.bg-custom {
+    background-color: #0099CC  ;
+}
+
+.c-opacity-navbar {
+    opacity: 0.95;
 }
 
