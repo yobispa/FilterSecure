@@ -35,3 +35,13 @@ body::-webkit-scrollbar {
     opacity: 0.95;
 }
 
+.flag {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  .netherland {
+    background: linear-gradient(#c11123 33%, #fff 33%, #fff 67%, #0f2e6b 0);
+  }
