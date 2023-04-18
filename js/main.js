@@ -22,3 +22,21 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
   }); // // DOMContentLoaded  end
+
+  const sendBtn = document.querySelector(".send");
+  const email = document.querySelector(".email-validation");
+
+  sendBtn.addEventListener("click", checkInput);
+
+  function checkInput() {
+    if (email.value.length == 0) {
+        alert("Fill email")
+        return
+    }
+    if (email.value.length < 4) {
+        alert("Email is too short")
+    }
+    if (!email.checkValidity()) {
+        email.reportValidity();
+    }
+  }
