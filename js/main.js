@@ -30,11 +30,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function checkInput() {
     if (email.value.length == 0) {
-        alert("Fill email")
-        return
+        alert("Fill youre email")
+        
+        return;
     }
     if (email.value.length < 4) {
-        alert("Email is too short")
+        email.setCustomValidity("Email is too short")
     }
     if (!email.checkValidity()) {
         email.reportValidity();
