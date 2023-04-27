@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(){
         return;
     }
     if (email.value.length < 4) {
-        email.setCustomValidity("Email is too short")
+        alert("Email is too short")
     }
     if (!email.checkValidity()) {
         email.reportValidity();

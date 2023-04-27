@@ -75,3 +75,27 @@ body::-webkit-scrollbar {
   .netherland {
     background: linear-gradient(#c11123 33%, #fff 33%, #fff 67%, #0f2e6b 0);
   }
+  .text-block {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* background-color: black; */
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+
+  @media screen and (max-width: 600px) {
+    .responsive {
+        display: none;
+    }
+    .responsive-pic {
+        height: 100vh;
+    }
+    .c-why {
+        height: 400px;
+        padding: 12%;
+        width: auto;
+    }
+  }
