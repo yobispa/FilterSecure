@@ -23,9 +23,9 @@ body::-webkit-scrollbar {
 }
 
 .c-why {
-    height: 500px;
+    height: auto;
     padding: 12%;
-    width: 95ch;
+    width: auto;
 }
 
 .bg-contact {
