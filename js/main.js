@@ -35,8 +35,8 @@ function sendDataToCart(jsonData) {
 
   for(let i = 0; i < jsonData.products.length; i++) {
     console.log(jsonData.products[i])
-    const card = `<div class="col-md-4 py-4 col-12 float-end">
-    <div class="card mx-3 p-0" style="width: 25rem; box-shadow: -2.5px 4px 10px;">
+    const card = `<div class="col-md-4 py-4 col-12 d-flex justify-content-md-start justify-content-center">
+    <div class="card mx-3 p-0" style="width: 23rem; box-shadow: -2.5px 4px 10px;">
     <div id="carouselExampleIndicators${i}" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators${i}" data-bs-slide-to="0" class="active"
