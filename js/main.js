@@ -35,7 +35,8 @@ function sendDataToCart(jsonData) {
 
   for(let i = 0; i < jsonData.products.length; i++) {
     console.log(jsonData.products[i])
-    const card = `<div class="card mx-3 p-0 products${i}" style="width: 25rem; box-shadow: -2.5px 4px 10px;">
+    const card = `<div class="col-md-4 py-4 col-12 float-end">
+    <div class="card mx-3 p-0" style="width: 25rem; box-shadow: -2.5px 4px 10px;">
     <div id="carouselExampleIndicators${i}" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators${i}" data-bs-slide-to="0" class="active"
@@ -76,10 +77,11 @@ function sendDataToCart(jsonData) {
     <div class="card-body text-center">
       <h5 class="card-title">${jsonData.products[i].modelnumber}</h5>
       <p class="card-text">${jsonData.products[i].package} <br> Price: €${jsonData.products[i].price}</p>
-      <a href="#" class="btn btn-primary add-to-cart">Check Product</a>
+      <a href="#" class="btn btn-primary add-to-cart products${i}">Check Product</a>
     </div>
+  </div>
   </div>`
-  document.querySelector(".c-card").insertAdjacentHTML("beforeend", card)
+  document.querySelector(".c-card").insertAdjacentHTML("afterend", card)
   }
   const productOne = document.querySelector(".products0")
   const productTwo = document.querySelector(".products1")
