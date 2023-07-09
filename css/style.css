@@ -117,6 +117,109 @@ transform: translate(0, -9.5px) rotate(45deg);
     text-shadow: 0 0 10px black;
   }
 
+  .button {
+    background-color: transparent;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in, transform 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:before,
+  .button:after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: #4c677c;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  
+  .button:before {
+    top: 0;
+  }
+  
+  .button:after {
+    bottom: 0;
+  }
+  
+  .button:hover:before,
+  .button:hover:after {
+    opacity: 0.6;
+    transform: rotate(0deg);
+  }
+  
+  .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:active {
+    background-color: #76a6ca;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    transform: scale(0.98);
+  }
+  .Btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
+
   @media screen and (max-width: 600px) {
     .responsive {
         display: none;
