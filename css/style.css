@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap');
 
+:root {
+  --main-color: #fff;
+  --bg-color: #323232;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -139,7 +144,7 @@ transform: translate(0, -9.5px) rotate(45deg);
     left: -100%;
     width: 200%;
     height: 100%;
-    background-color: #4c677c;
+    background-color: #5d7c98;
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: rotate(45deg);
@@ -218,6 +223,34 @@ transform: translate(0, -9.5px) rotate(45deg);
   .Btn:active {
     transform: translate(5px,5px);
     transition-duration: .3s;
+  }
+
+  .card__counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    height: 45px;
+    padding: 5px;
+    background: #666;
+    border-radius: 50px;
+    width: 120px;
+    margin-top: 5px;
+  }
+  .card__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    background: transparent;
+  }
+  .card__counter-score, .card__btn {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-color);
+  }
+  .card__btn-plus {
+    background: var(--bg-color);
   }
 
   @media screen and (max-width: 600px) {
